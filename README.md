@@ -1,5 +1,7 @@
 # Bookstore
 
+Keep track of the books you are reading.
+
 ## Live demo
 
 - (coming soon)
