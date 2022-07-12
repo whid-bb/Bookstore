@@ -10,7 +10,7 @@ const categoriesReducer = (state = [], action) => {
 };
 
 export const statusAction = () => ({
-  type: CHECK_STATUS
+  type: CHECK_STATUS,
 });
 
 export default categoriesReducer;
