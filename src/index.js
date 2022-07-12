@@ -6,13 +6,13 @@ import store from './redux/configureStore';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+// console.log(store.getState());
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Provider store={store}>
         <App />
-      </BrowserRouter>
-    </Provider>
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
 );
