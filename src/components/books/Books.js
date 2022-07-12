@@ -1,22 +1,9 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import Addbook from './Addbook';
 
 function Books() {
-  const [books] = useState(
-    [
-      {
-        id: 1,
-        title: 'testTitle',
-        author: 'testAuthor',
-      },
-      {
-        id: 2,
-        title: 'testTitle1',
-        author: 'testAuthor1',
-      },
-    ],
-  );
+  const books = useSelector((state) => state.books);
 
   return (
     <>
