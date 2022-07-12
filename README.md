@@ -4,7 +4,7 @@ Keep track of the books you are reading.
 
 ## Live demo
 
-- (coming soon)
+- [Demo](https://62cd7fb087c40b0f52e97c49--bookstore-whid-bb.netlify.app/)
 
 ## Built With
 
