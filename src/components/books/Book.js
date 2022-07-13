@@ -9,6 +9,7 @@ function Book(props) {
   const removeBook = (id) => {
     dispatch(removeAction(id));
   };
+  // console.log(bookId);
 
   return (
     <li>
@@ -22,7 +23,7 @@ function Book(props) {
 }
 
 Book.propTypes = {
-  bookId: PropTypes.number.isRequired,
+  bookId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };
