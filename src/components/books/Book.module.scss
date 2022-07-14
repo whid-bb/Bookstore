@@ -92,6 +92,11 @@
   font-weight: 300;
 }
 
+.genre {
+  color: rgb(175, 175, 175);
+  font-weight: 400;
+}
+
 .bookData {
   display: flex;
   flex-direction: column;
@@ -104,6 +109,7 @@ $progressSize: 100px;
 .progressContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .progressWrap {
@@ -147,6 +153,18 @@ $progressSize: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.percentContainer {
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 1rem;
+
+  .percent {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-weight: 300;
   }
 }

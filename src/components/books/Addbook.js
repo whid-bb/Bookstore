@@ -34,6 +34,7 @@ function Addbook() {
       <div className={style.header}>ADD NEW BOOK</div>
       <div className={style.inputContainer}>
         <input
+          className={style.inputAuthor}
           required
           type="text"
           placeholder="Title"
@@ -44,7 +45,7 @@ function Addbook() {
         <input
           required
           type="text"
-          placeholder="Author"
+          placeholder="Category"
           name="author"
           value={book.author}
           onChange={handleInputChange}

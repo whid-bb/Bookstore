@@ -8,7 +8,8 @@
 
   ul {
     display: flex;
-    margin-inline: 1rem;
+    margin-left: 1rem;
+    margin-right: auto;
 
     li {
       margin-inline: 1rem;
@@ -32,4 +33,23 @@
 
 .active {
   font-weight: 400;
+}
+
+.profileContainer {
+  fill: var(--main-color);
+  --width: 20px;
+
+  border: 1px solid var(--shadow-color);
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  svg {
+    position: absolute;
+    width: var(--width);
+    height: var(--width);
+    margin-bottom: 5px;
+  }
 }

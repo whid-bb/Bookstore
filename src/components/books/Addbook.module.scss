@@ -14,12 +14,14 @@
   input[type='text'] {
     background-color: #fff;
     padding: 10px 10px;
-    flex-grow: 1;
     /* stylelint-disable-next-line */
     @extend .itemRadius;
 
     font-weight: 300;
     margin-right: 1rem;
+    &.inputAuthor {
+      flex-grow: 1;
+    }
   }
 
   .inputContainer {

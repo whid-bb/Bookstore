@@ -16,6 +16,7 @@ function Book(props) {
   return (
     <li className={`${style.book} ${booksLoaded ? style.listLoaded : ''}`} style={{ animationDelay: `${animationDelay}ms` }}>
       <div className={style.bookData}>
+        <div className={style.genre}>Adventure</div>
         <div className={style.title}>{title}</div>
         <div className={style.author}>{author}</div>
 
@@ -35,12 +36,13 @@ function Book(props) {
             <div className={`${style.mask}`}>
               <div className={style.fill} />
             </div>
-            <div className={style.insideCircle}>
-              <span>75%</span>
-            </div>
+            <div className={style.insideCircle} />
           </div>
         </div>
-
+        <div className={style.percentContainer}>
+          <div className={style.percent}>75%</div>
+          <div className={style.text}>Completed</div>
+        </div>
       </div>
 
       <div className={style.updateContainer}>
