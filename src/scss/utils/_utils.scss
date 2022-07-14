@@ -1,4 +1,14 @@
 /* stylelint-disable-next-line */
+
+:root {
+  --main-color: #0290ff;
+}
+
 @mixin round {
   border-radius: 20px;
+}
+
+.center-content {
+  width: 80%;
+  margin: 0 auto;
 }

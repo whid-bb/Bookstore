@@ -1,5 +1,6 @@
 @use './utils';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -9,4 +10,13 @@ button {
   padding: 1rem 2rem;
   border: 1px solid black;
   border-radius: 20px;
+
+  @include utils.md {
+    padding: 0;
+  }
+}
+
+.site-content {
+  @extend .center-content;
+  margin-top: 3em;
 }

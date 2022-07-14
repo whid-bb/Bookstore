@@ -1,0 +1,21 @@
+.book {
+  animation-name: showItem;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &.listLoaded {
+    animation: none;
+  }
+}
+
+@keyframes showItem {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

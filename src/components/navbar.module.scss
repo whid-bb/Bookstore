@@ -1,4 +1,30 @@
+@use '../scss/utils';
+
 #mainNav {
+  border-bottom: 1px solid black;
+  padding-block: 1.5rem;
+  ul {
+    display: flex;
+    margin-inline: 1rem;
+    li {
+      margin-inline: 1rem;
+      font-weight: 100;
+    }
+  }
+}
+
+.content {
   display: flex;
   align-items: center;
+  @extend .center-content;
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--main-color);
+}
+
+.active {
+  font-weight: 400;
 }

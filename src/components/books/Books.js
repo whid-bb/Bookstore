@@ -9,19 +9,20 @@ import style from './Books.module.scss';
 function Books() {
   const books = useSelector((state) => state.books);
   const initialLoad = useSelector((state) => state.booksLoad);
-  // console.log(books);
   const dispatch = useDispatch();
+  const ANIMATION_DELAY = 170;
+
   useEffect(() => {
     if (!initialLoad.initLoad) {
       dispatch(getAllAction());
-      dispatch(loadedOnStartAction());
+      setTimeout(() => dispatch(loadedOnStartAction()), 2500);
     }
   }, []);
 
   const reloadList = () => {
     dispatch(getAllAction());
   };
-  // console.log(books);
+
   return (
     <>
       <ul className={style.booksList}>
@@ -31,7 +32,8 @@ function Books() {
             bookId={book}
             title={books[book][0].title}
             author={books[book][0].author}
-            animationDelay={index * 20}
+            animationDelay={index * ANIMATION_DELAY}
+            booksLoaded={initialLoad.initLoad}
           />
         ))}
       </ul>
