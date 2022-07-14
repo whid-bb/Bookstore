@@ -1,7 +1,8 @@
 @use '../scss/utils';
 
 #mainNav {
-  border-bottom: 1px solid black;
+  box-shadow: 5px 0 10px var(--shadow-color);
+  background-color: #fff;
   padding-block: 1.5rem;
   ul {
     display: flex;
