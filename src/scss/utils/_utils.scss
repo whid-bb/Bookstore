@@ -2,6 +2,7 @@
 @use './breakpoints';
 :root {
   --main-color: #0290ff;
+  --main-color-hover: hsla(206, 100%, 50%, 0.74);
   --border-color: rgb(219, 219, 219);
 }
 
@@ -19,4 +20,20 @@
 
 button {
   cursor: pointer;
+}
+
+.itemRadius {
+  border-radius: 8px;
+}
+
+.colorButton {
+  @extend .itemRadius;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 11px 21px;
+  font-weight: 300;
+  transition: background 0.2s ease-in;
+  &:hover {
+    background-color: var(--main-color-hover);
+  }
 }

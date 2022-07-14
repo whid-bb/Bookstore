@@ -1,0 +1,28 @@
+@use '../../scss/utils';
+
+.header {
+  color: rgb(173, 173, 173);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  input[type='text'] {
+    background-color: #fff;
+    padding: 10px 10px;
+    flex-grow: 1;
+    @extend .itemRadius;
+    font-weight: 300;
+    margin-right: 1rem;
+  }
+
+  .inputContainer {
+    display: flex;
+  }
+
+  button {
+    @extend .colorButton;
+  }
+}

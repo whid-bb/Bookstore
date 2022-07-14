@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addAction } from '../../redux/books/books';
+import style from './Addbook.module.scss';
 
 function Addbook() {
   const initFormState = {
@@ -29,24 +30,27 @@ function Addbook() {
   };
 
   return (
-    <form onSubmit={submitForm}>
-      <input
-        required
-        type="text"
-        placeholder="Title"
-        name="title"
-        value={book.title}
-        onChange={handleInputChange}
-      />
-      <input
-        required
-        type="text"
-        placeholder="Author"
-        name="author"
-        value={book.author}
-        onChange={handleInputChange}
-      />
-      <button type="submit">Add new book</button>
+    <form className={style.form} onSubmit={submitForm}>
+      <div className={style.header}>ADD NEW BOOK</div>
+      <div className={style.inputContainer}>
+        <input
+          required
+          type="text"
+          placeholder="Title"
+          name="title"
+          value={book.title}
+          onChange={handleInputChange}
+        />
+        <input
+          required
+          type="text"
+          placeholder="Author"
+          name="author"
+          value={book.author}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Add new book</button>
+      </div>
     </form>
   );
 }

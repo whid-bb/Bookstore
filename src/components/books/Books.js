@@ -37,7 +37,7 @@ function Books() {
           />
         ))}
       </ul>
-      <button type="button" onClick={() => reloadList()}>Reload list</button>
+      <button type="button" style={{ display: 'none' }} onClick={() => reloadList()}>Reload list</button>
       <Addbook />
     </>
   );
