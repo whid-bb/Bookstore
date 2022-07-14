@@ -25,6 +25,8 @@ const booksReducer = (state = initState, action) => {
     case GET_ALL:
       return action.payload;
     case ADD:
+      console.log(state);
+      console.log(action.payload);
       return { ...state, ...action.payload };
     case REMOVE:
       // eslint-disable-next-line max-len
@@ -63,7 +65,7 @@ export const addAction = (title, author) => async (dispatch) => {
       type: ADD,
       payload: {
         // eslint-disable-next-line camelcase
-        item_id: [
+        [item_id]: [
           {
             title,
             author,

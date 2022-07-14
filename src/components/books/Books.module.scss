@@ -1,0 +1,9 @@
+@use '../../scss/utils';
+
+.booksList {
+  font-size: 2rem;
+
+  @include utils.md {
+    font-size: 1rem;
+  }
+}
