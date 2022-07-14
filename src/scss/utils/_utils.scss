@@ -1,7 +1,8 @@
 /* stylelint-disable-next-line */
-
+@use './breakpoints';
 :root {
   --main-color: #0290ff;
+  --border-color: rgb(219, 219, 219);
 }
 
 @mixin round {
@@ -9,6 +10,13 @@
 }
 
 .center-content {
-  width: 80%;
   margin: 0 auto;
+  width: 95%;
+  @include breakpoints.md {
+    width: 80%;
+  }
+}
+
+button {
+  cursor: pointer;
 }

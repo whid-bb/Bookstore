@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import style from './navbar.module.scss';
 
 function Navbar() {
@@ -11,10 +11,10 @@ function Navbar() {
         </div>
         <ul>
           <li>
-            <Link className={style.active} to="/">Books</Link>
+            <NavLink className={({ isActive }) => (isActive ? style.active : null)} to="/">Books</NavLink>
           </li>
           <li>
-            <Link to="/categories">Categories</Link>
+            <NavLink className={({ isActive }) => (isActive ? style.active : null)} to="/categories">Categories</NavLink>
           </li>
         </ul>
       </div>

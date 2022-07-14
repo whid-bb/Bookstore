@@ -15,15 +15,39 @@ function Book(props) {
 
   return (
     <li className={`${style.book} ${booksLoaded ? style.listLoaded : ''}`} style={{ animationDelay: `${animationDelay}ms` }}>
-      {title}
-      <br />
-      {author}
-      <br />
-      {animationDelay}
-      <br />
-      {booksLoaded}
-      <br />
-      <button onClick={() => removeBook(bookId)} type="button">Remove</button>
+      <div className={style.bookData}>
+        <div className={style.title}>{title}</div>
+        <div className={style.author}>{author}</div>
+
+        <div className={style.crud}>
+          <button type="button">Comments</button>
+          <button onClick={() => removeBook(bookId)} type="button">Remove</button>
+          <button type="button">Edit</button>
+        </div>
+
+      </div>
+      <div className={style.progressContainer}>
+        <div className={style.progressWrap}>
+          <div className={style.progress}>
+            <div className={`${style.mask} ${style.full}`}>
+              <div className={style.fill} />
+            </div>
+            <div className={`${style.mask}`}>
+              <div className={style.fill} />
+            </div>
+            <div className={style.insideCircle}>
+              <span>75%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div className={style.updateContainer}>
+        <div className={style.chapter}>CURRENT CHAPTER</div>
+        <div className={style.currentChapter}>Chapter 3</div>
+        <button type="button"> UPDATE PROGRESS </button>
+      </div>
     </li>
   );
 }
