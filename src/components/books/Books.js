@@ -12,7 +12,6 @@ function Books() {
   // console.log(books);
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log(initialLoad.initLoad);
     if (!initialLoad.initLoad) {
       dispatch(getAllAction());
       dispatch(loadedOnStartAction());

@@ -25,8 +25,6 @@ const booksReducer = (state = initState, action) => {
     case GET_ALL:
       return action.payload;
     case ADD:
-      console.log(state);
-      console.log(action.payload);
       return { ...state, ...action.payload };
     case REMOVE:
       // eslint-disable-next-line max-len
