@@ -1,4 +1,56 @@
+/* stylelint-disable-next-line */
+@use '../scss/utils';
+
 #mainNav {
+  box-shadow: 5px 0 10px var(--shadow-color);
+  background-color: #fff;
+  padding-block: 1.5rem;
+
+  ul {
+    display: flex;
+    margin-left: 1rem;
+    margin-right: auto;
+
+    li {
+      margin-inline: 1rem;
+      font-weight: 100;
+    }
+  }
+}
+
+.content {
   display: flex;
   align-items: center;
+  /* stylelint-disable-next-line */
+  @extend .center-content;
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--main-color);
+}
+
+.active {
+  font-weight: 400;
+}
+
+.profileContainer {
+  --width: 20px;
+
+  fill: var(--main-color);
+  border: 1px solid var(--shadow-color);
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  svg {
+    position: absolute;
+    width: var(--width);
+    height: var(--width);
+    margin-bottom: 5px;
+  }
 }

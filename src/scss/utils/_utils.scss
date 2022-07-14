@@ -1,0 +1,47 @@
+/* stylelint-disable-next-line */
+@use './breakpoints';
+
+:root {
+  --main-color: #0290ff;
+  --main-color-hover: hsla(206, 100%, 50%, 0.74);
+  --border-color: rgb(219, 219, 219);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* stylelint-disable-next-line */
+@mixin round {
+  border-radius: 20px;
+}
+
+.center-content {
+  margin: 0 auto;
+  width: 95%;
+
+  /* stylelint-disable-next-line */
+  @include breakpoints.md {
+    width: 80%;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.itemRadius {
+  border-radius: 8px;
+}
+
+.colorButton {
+  /* stylelint-disable-next-line */
+  @extend .itemRadius;
+
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 11px 21px;
+  font-weight: 300;
+  transition: background 0.2s ease-in;
+
+  &:hover {
+    background-color: var(--main-color-hover);
+  }
+}

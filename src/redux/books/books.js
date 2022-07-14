@@ -5,22 +5,22 @@ const ADD = 'bookstore/books/ADD';
 const REMOVE = 'bookstore/books/REMOVE';
 const GET_ALL = 'bookstore/books/GET_ALL';
 
-const initState = {
-  1: [
-    {
-      title: 'TestTitle',
-      author: 'TestAuthor',
-    },
-  ],
-  2: [
-    {
-      title: 'TestTitlePart2',
-      author: 'TestAuthorPart2',
-    },
-  ],
-};
+// const initState = {
+//   1: [
+//     {
+//       title: 'TestTitle',
+//       author: 'TestAuthor',
+//     },
+//   ],
+//   2: [
+//     {
+//       title: 'TestTitlePart2',
+//       author: 'TestAuthorPart2',
+//     },
+//   ],
+// };
 
-const booksReducer = (state = initState, action) => {
+const booksReducer = (state = {}, action) => {
   switch (action.type) {
     case GET_ALL:
       return action.payload;
@@ -63,7 +63,7 @@ export const addAction = (title, author) => async (dispatch) => {
       type: ADD,
       payload: {
         // eslint-disable-next-line camelcase
-        item_id: [
+        [item_id]: [
           {
             title,
             author,

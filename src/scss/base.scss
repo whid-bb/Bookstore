@@ -1,0 +1,22 @@
+/* stylelint-disable-next-line */
+@use './utils';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Roboto+Slab:wght@300;500&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(230, 230, 230);
+  margin-bottom: 2rem;
+}
+
+.site-content {
+  /* stylelint-disable-next-line */
+  @extend .center-content;
+
+  margin-top: 3em;
+  font-family: 'Roboto Slab', serif;
+}
+
+.active {
+  font-weight: 400;
+}
