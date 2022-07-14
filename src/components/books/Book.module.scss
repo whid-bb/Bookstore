@@ -1,3 +1,4 @@
+/* stylelint-disable-next-line */
 @use '../../scss/utils';
 
 .book {
@@ -5,16 +6,13 @@
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   min-height: 14rem;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   background-color: #fff;
   justify-content: space-between;
   padding: 1.7rem;
   margin-bottom: 2rem;
-
-  @include utils.md {
-  }
 
   &.listLoaded {
     animation: none;
@@ -33,8 +31,31 @@
   }
 }
 
+.updateContainer {
+  padding-left: 3rem;
+  margin-left: 3rem;
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  font-weight: 300;
+
+  .chapter {
+    margin-bottom: 10px;
+  }
+
+  button {
+    /* stylelint-disable-next-line */
+    @extend .colorButton;
+
+    margin-top: 2rem;
+  }
+}
+
 .crud {
   display: flex;
+
   button {
     border: 0;
     padding-inline: 1rem;
@@ -43,13 +64,16 @@
     justify-content: flex-start;
     border-right: 1px solid rgb(219, 219, 219);
     border-radius: 0;
+    /* stylelint-disable-next-line */
     max-width: fit-content;
     margin-top: 2rem;
     font-weight: 300;
+
     &:last-child {
       border-right: 0;
       padding-inline-end: 0;
     }
+
     &:first-child {
       padding-inline-start: 0;
     }
@@ -57,6 +81,7 @@
 }
 
 .title {
+  /* stylelint-disable-next-line */
   font-size: clamp(1.5rem, 5.5vw, 2rem);
   font-weight: 800;
 }
@@ -86,9 +111,9 @@ $progressSize: 100px;
   height: $progressSize;
   background-color: #fff;
   border-radius: 50%;
-  border: 0px solid #000;
 
   .mask {
+    /* stylelint-disable-next-line */
     clip: rect(0px, $progressSize, $progressSize, calc($progressSize / 2));
   }
 
@@ -106,6 +131,7 @@ $progressSize: 100px;
   }
 
   .mask .fill {
+    /* stylelint-disable-next-line */
     clip: rect(0px, calc($progressSize / 2), $progressSize, 0px);
     background-color: var(--main-color);
   }
@@ -122,24 +148,5 @@ $progressSize: 100px;
     align-items: center;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
-  }
-}
-
-.updateContainer {
-  padding-left: 3rem;
-  margin-left: 3rem;
-  border-left: 1px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: stretch;
-  font-weight: 300;
-  .chapter {
-    margin-bottom: 10px;
-  }
-
-  button {
-    @extend .colorButton;
-    margin-top: 2rem;
   }
 }

@@ -1,4 +1,6 @@
+/* stylelint-disable-next-line */
 @use './utils';
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Roboto+Slab:wght@300;500&display=swap');
 
 body {
@@ -8,7 +10,9 @@ body {
 }
 
 .site-content {
+  /* stylelint-disable-next-line */
   @extend .center-content;
+
   margin-top: 3em;
   font-family: 'Roboto Slab', serif;
 }

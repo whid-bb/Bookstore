@@ -1,12 +1,15 @@
+/* stylelint-disable-next-line */
 @use '../scss/utils';
 
 #mainNav {
   box-shadow: 5px 0 10px var(--shadow-color);
   background-color: #fff;
   padding-block: 1.5rem;
+
   ul {
     display: flex;
     margin-inline: 1rem;
+
     li {
       margin-inline: 1rem;
       font-weight: 100;
@@ -17,6 +20,7 @@
 .content {
   display: flex;
   align-items: center;
+  /* stylelint-disable-next-line */
   @extend .center-content;
 }
 
